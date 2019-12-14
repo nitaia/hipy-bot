@@ -58,7 +58,7 @@ void loop()
   //Turn
   Turn(turnTo);
 
-  //Move
+  //Move forward
   Move(velocity);
 }
 
