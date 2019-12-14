@@ -24,13 +24,10 @@ void setup()
 void loop()
 {
   //sensor chack
-  sensor[0] = analogRead(0);
-  sensor[1] = analogRead(1);
-  sensor[2] = analogRead(2);
-  sensor[3] = analogRead(3);
-  sensor[4] = analogRead(4);
-  sensor[5] = analogRead(5);
-  sensor[6] = analogRead(6);
+  
+  for(int i = 0; i < 7; i++)
+    sensor[i] = analogRead(i);
+  }
 
   //sensor average
   sensorB = 0;
@@ -43,7 +40,7 @@ void loop()
       sensorB++;
     }
   }
-  sum = avr / sensorB;
+  avr = sum / sensorB;
   
   //set reality
   real = avr * (90 / 3);
